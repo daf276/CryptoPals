@@ -1,3 +1,0 @@
-C:/Users/D064693/CLionProjects/Test/cmake-build-relwithdebinfo/CMakeFiles/rebuild_cache.dir
-C:/Users/D064693/CLionProjects/Test/cmake-build-relwithdebinfo/CMakeFiles/Test.dir
-C:/Users/D064693/CLionProjects/Test/cmake-build-relwithdebinfo/CMakeFiles/edit_cache.dir
