@@ -64,43 +64,6 @@ CMAKE_SOURCE_DIR = C:\Users\D064693\CLionProjects\CryptoPals\HelperFunctions
 CMAKE_BINARY_DIR = C:\Users\D064693\CLionProjects\CryptoPals\HelperFunctions\cmake-build-release
 
 #=============================================================================
-# Target rules for target CMakeFiles/HelperFunctions.dir
-
-# All Build rule for target.
-CMakeFiles/HelperFunctions.dir/all:
-	$(MAKE) -f CMakeFiles\HelperFunctions.dir\build.make CMakeFiles/HelperFunctions.dir/depend
-	$(MAKE) -f CMakeFiles\HelperFunctions.dir\build.make CMakeFiles/HelperFunctions.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\D064693\CLionProjects\CryptoPals\HelperFunctions\cmake-build-release\CMakeFiles --progress-num=1,2,3,4 "Built target HelperFunctions"
-.PHONY : CMakeFiles/HelperFunctions.dir/all
-
-# Include target in all.
-all: CMakeFiles/HelperFunctions.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/HelperFunctions.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\D064693\CLionProjects\CryptoPals\HelperFunctions\cmake-build-release\CMakeFiles 4
-	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/HelperFunctions.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\D064693\CLionProjects\CryptoPals\HelperFunctions\cmake-build-release\CMakeFiles 0
-.PHONY : CMakeFiles/HelperFunctions.dir/rule
-
-# Convenience name for target.
-HelperFunctions: CMakeFiles/HelperFunctions.dir/rule
-
-.PHONY : HelperFunctions
-
-# clean rule for target.
-CMakeFiles/HelperFunctions.dir/clean:
-	$(MAKE) -f CMakeFiles\HelperFunctions.dir\build.make CMakeFiles/HelperFunctions.dir/clean
-.PHONY : CMakeFiles/HelperFunctions.dir/clean
-
-# clean rule for target.
-clean: CMakeFiles/HelperFunctions.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
 # Special targets to cleanup operation of make.
 
 # Special rule to run CMake to check the build system integrity.

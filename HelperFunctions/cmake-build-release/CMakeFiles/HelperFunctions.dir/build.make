@@ -56,22 +56,9 @@ include CMakeFiles/HelperFunctions.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/HelperFunctions.dir/flags.make
 
-CMakeFiles/HelperFunctions.dir/main.cpp.obj: CMakeFiles/HelperFunctions.dir/flags.make
-CMakeFiles/HelperFunctions.dir/main.cpp.obj: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\D064693\CLionProjects\CryptoPals\HelperFunctions\cmake-build-release\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/HelperFunctions.dir/main.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\HelperFunctions.dir\main.cpp.obj -c C:\Users\D064693\CLionProjects\CryptoPals\HelperFunctions\main.cpp
-
-CMakeFiles/HelperFunctions.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HelperFunctions.dir/main.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\D064693\CLionProjects\CryptoPals\HelperFunctions\main.cpp > CMakeFiles\HelperFunctions.dir\main.cpp.i
-
-CMakeFiles/HelperFunctions.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HelperFunctions.dir/main.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\D064693\CLionProjects\CryptoPals\HelperFunctions\main.cpp -o CMakeFiles\HelperFunctions.dir\main.cpp.s
-
 CMakeFiles/HelperFunctions.dir/Encodings.cpp.obj: CMakeFiles/HelperFunctions.dir/flags.make
 CMakeFiles/HelperFunctions.dir/Encodings.cpp.obj: ../Encodings.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\D064693\CLionProjects\CryptoPals\HelperFunctions\cmake-build-release\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/HelperFunctions.dir/Encodings.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\D064693\CLionProjects\CryptoPals\HelperFunctions\cmake-build-release\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/HelperFunctions.dir/Encodings.cpp.obj"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\HelperFunctions.dir\Encodings.cpp.obj -c C:\Users\D064693\CLionProjects\CryptoPals\HelperFunctions\Encodings.cpp
 
 CMakeFiles/HelperFunctions.dir/Encodings.cpp.i: cmake_force
@@ -84,7 +71,7 @@ CMakeFiles/HelperFunctions.dir/Encodings.cpp.s: cmake_force
 
 CMakeFiles/HelperFunctions.dir/Algorithms.cpp.obj: CMakeFiles/HelperFunctions.dir/flags.make
 CMakeFiles/HelperFunctions.dir/Algorithms.cpp.obj: ../Algorithms.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\D064693\CLionProjects\CryptoPals\HelperFunctions\cmake-build-release\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/HelperFunctions.dir/Algorithms.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\D064693\CLionProjects\CryptoPals\HelperFunctions\cmake-build-release\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/HelperFunctions.dir/Algorithms.cpp.obj"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\HelperFunctions.dir\Algorithms.cpp.obj -c C:\Users\D064693\CLionProjects\CryptoPals\HelperFunctions\Algorithms.cpp
 
 CMakeFiles/HelperFunctions.dir/Algorithms.cpp.i: cmake_force
@@ -97,25 +84,23 @@ CMakeFiles/HelperFunctions.dir/Algorithms.cpp.s: cmake_force
 
 # Object files for target HelperFunctions
 HelperFunctions_OBJECTS = \
-"CMakeFiles/HelperFunctions.dir/main.cpp.obj" \
 "CMakeFiles/HelperFunctions.dir/Encodings.cpp.obj" \
 "CMakeFiles/HelperFunctions.dir/Algorithms.cpp.obj"
 
 # External object files for target HelperFunctions
 HelperFunctions_EXTERNAL_OBJECTS =
 
-HelperFunctions.exe: CMakeFiles/HelperFunctions.dir/main.cpp.obj
-HelperFunctions.exe: CMakeFiles/HelperFunctions.dir/Encodings.cpp.obj
-HelperFunctions.exe: CMakeFiles/HelperFunctions.dir/Algorithms.cpp.obj
-HelperFunctions.exe: CMakeFiles/HelperFunctions.dir/build.make
-HelperFunctions.exe: CMakeFiles/HelperFunctions.dir/linklibs.rsp
-HelperFunctions.exe: CMakeFiles/HelperFunctions.dir/objects1.rsp
-HelperFunctions.exe: CMakeFiles/HelperFunctions.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\D064693\CLionProjects\CryptoPals\HelperFunctions\cmake-build-release\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable HelperFunctions.exe"
+libHelperFunctions.dll: CMakeFiles/HelperFunctions.dir/Encodings.cpp.obj
+libHelperFunctions.dll: CMakeFiles/HelperFunctions.dir/Algorithms.cpp.obj
+libHelperFunctions.dll: CMakeFiles/HelperFunctions.dir/build.make
+libHelperFunctions.dll: CMakeFiles/HelperFunctions.dir/linklibs.rsp
+libHelperFunctions.dll: CMakeFiles/HelperFunctions.dir/objects1.rsp
+libHelperFunctions.dll: CMakeFiles/HelperFunctions.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\D064693\CLionProjects\CryptoPals\HelperFunctions\cmake-build-release\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX shared library libHelperFunctions.dll"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\HelperFunctions.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/HelperFunctions.dir/build: HelperFunctions.exe
+CMakeFiles/HelperFunctions.dir/build: libHelperFunctions.dll
 
 .PHONY : CMakeFiles/HelperFunctions.dir/build
 

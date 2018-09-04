@@ -42,7 +42,7 @@ namespace Algorithms {
         return result;
     }
 
-    std::string RepeatingKeyXorDecryption(std::vector<char> input) {
+    std::string RepeatingSingleByteXorDecryption(std::vector<char> input) {
         double result_error = input.size();
         std::vector<char> result;
 

@@ -1,11 +1,10 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/HelperFunctions.dir/main.cpp.obj"
   "CMakeFiles/HelperFunctions.dir/Encodings.cpp.obj"
   "CMakeFiles/HelperFunctions.dir/Algorithms.cpp.obj"
-  "HelperFunctions.pdb"
-  "HelperFunctions.exe"
-  "HelperFunctions.exe.manifest"
+  "libHelperFunctions.pdb"
+  "libHelperFunctions.dll"
   "libHelperFunctions.dll.a"
+  "libHelperFunctions.dll.manifest"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -4,7 +4,7 @@
 # compile CXX with C:/Program Files/mingw-w64/x86_64-8.1.0-win32-seh-rt_v6-rev0/mingw64/bin/g++.exe
 CXX_FLAGS = -O3 -DNDEBUG   -std=gnu++17
 
-CXX_DEFINES = 
+CXX_DEFINES = -DHelperFunctions_EXPORTS
 
 CXX_INCLUDES = 
 

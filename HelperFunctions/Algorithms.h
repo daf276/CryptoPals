@@ -6,7 +6,7 @@
 
 namespace Algorithms {
         std::vector<char> RepeatingKeyXor(std::vector<char> bytearray1, std::vector<char> bytearray2);
-        std::string RepeatingKeyXorDecryption(std::vector<char> input);
+        std::string RepeatingSingleByteXorDecryption(std::vector<char> input);
         double EvaluateLetterFrequencyError(std::vector<char> input);
 }
 
