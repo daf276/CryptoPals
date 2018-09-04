@@ -1,3 +1,0 @@
-C:/Users/D064693/CLionProjects/CryptoPals/FixedXor/cmake-build-debug/CMakeFiles/FixedXor.dir
-C:/Users/D064693/CLionProjects/CryptoPals/FixedXor/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/D064693/CLionProjects/CryptoPals/FixedXor/cmake-build-debug/CMakeFiles/rebuild_cache.dir
