@@ -8,7 +8,7 @@ namespace Crypto {
 
         std::vector<char> inputAsBytes;
 
-        hexStringToByteArray(&input, &inputAsBytes);
+        inputAsBytes = HexStringToByteArray(input);
 
         std::string base64Output;
 
@@ -49,16 +49,20 @@ namespace Crypto {
         return s;
     }
 
-    void Encodings::hexStringToByteArray(std::string *hexString, std::vector<char> *byteArray) {
-        if (hexString->length() % 2 != 0) throw BrokenByteException();
+    std::vector<char> Encodings::HexStringToByteArray(std::string hexString) {
+        if (hexString.length() % 2 != 0) throw BrokenByteException();
 
-        std::vector<char> inputAsBytes(hexString->length() / 2);
+        std::vector<char> inputAsBytes(hexString.length() / 2);
 
         for (int i = 0; i < inputAsBytes.size(); i++) {
-            std::string currentByte = hexString->substr(i * 2, 2);
+            std::string currentByte = hexString.substr(i * 2, 2);
             inputAsBytes[i] = static_cast<char>(strtol(currentByte.c_str(), nullptr, 16));
         }
 
-        *byteArray = inputAsBytes;
+        return inputAsBytes;
+    }
+
+    std::string Encodings::ByteArrayToHexString(std::vector<char> byteArray) {
+
     }
 }

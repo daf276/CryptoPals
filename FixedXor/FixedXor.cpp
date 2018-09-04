@@ -2,12 +2,13 @@
 #include "../ConvertHexToBase64/Encodings.h"
 
 namespace Crypto {
-    std::string FixedXor::Xor2Buffers(std::string xor_string_1, std::string xor_string_2) {
-        
-        std::vector<char> xor_bytearray_1;
-        std::vector<char> xor_bytearray_2;
+    std::vector<char> FixedXor::Xor2Buffers(std::vector<char> bytearray1, std::vector<char> bytearray2) {
+        std::vector<char> result(bytearray1.size());
 
-        Encodings::hexStringToByteArray(&xor_string_1, &xor_bytearray_1);
-        Encodings::hexStringToByteArray(&xor_string_2, &xor_bytearray_2);
+        for (int i = 0; i < result.size(); ++i) {
+            result[i] = bytearray1[i] ^ bytearray2[i];
+        }
+
+        return result;
     }
 }

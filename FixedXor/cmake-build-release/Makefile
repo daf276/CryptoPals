@@ -122,6 +122,33 @@ FixedXor/fast:
 	$(MAKE) -f CMakeFiles\FixedXor.dir\build.make CMakeFiles/FixedXor.dir/build
 .PHONY : FixedXor/fast
 
+C_/Users/D064693/CLionProjects/CryptoPals/ConvertHexToBase64/Encodings.obj: C_/Users/D064693/CLionProjects/CryptoPals/ConvertHexToBase64/Encodings.cpp.obj
+
+.PHONY : C_/Users/D064693/CLionProjects/CryptoPals/ConvertHexToBase64/Encodings.obj
+
+# target to build an object file
+C_/Users/D064693/CLionProjects/CryptoPals/ConvertHexToBase64/Encodings.cpp.obj:
+	$(MAKE) -f CMakeFiles\FixedXor.dir\build.make CMakeFiles/FixedXor.dir/C_/Users/D064693/CLionProjects/CryptoPals/ConvertHexToBase64/Encodings.cpp.obj
+.PHONY : C_/Users/D064693/CLionProjects/CryptoPals/ConvertHexToBase64/Encodings.cpp.obj
+
+C_/Users/D064693/CLionProjects/CryptoPals/ConvertHexToBase64/Encodings.i: C_/Users/D064693/CLionProjects/CryptoPals/ConvertHexToBase64/Encodings.cpp.i
+
+.PHONY : C_/Users/D064693/CLionProjects/CryptoPals/ConvertHexToBase64/Encodings.i
+
+# target to preprocess a source file
+C_/Users/D064693/CLionProjects/CryptoPals/ConvertHexToBase64/Encodings.cpp.i:
+	$(MAKE) -f CMakeFiles\FixedXor.dir\build.make CMakeFiles/FixedXor.dir/C_/Users/D064693/CLionProjects/CryptoPals/ConvertHexToBase64/Encodings.cpp.i
+.PHONY : C_/Users/D064693/CLionProjects/CryptoPals/ConvertHexToBase64/Encodings.cpp.i
+
+C_/Users/D064693/CLionProjects/CryptoPals/ConvertHexToBase64/Encodings.s: C_/Users/D064693/CLionProjects/CryptoPals/ConvertHexToBase64/Encodings.cpp.s
+
+.PHONY : C_/Users/D064693/CLionProjects/CryptoPals/ConvertHexToBase64/Encodings.s
+
+# target to generate assembly for a file
+C_/Users/D064693/CLionProjects/CryptoPals/ConvertHexToBase64/Encodings.cpp.s:
+	$(MAKE) -f CMakeFiles\FixedXor.dir\build.make CMakeFiles/FixedXor.dir/C_/Users/D064693/CLionProjects/CryptoPals/ConvertHexToBase64/Encodings.cpp.s
+.PHONY : C_/Users/D064693/CLionProjects/CryptoPals/ConvertHexToBase64/Encodings.cpp.s
+
 FixedXor.obj: FixedXor.cpp.obj
 
 .PHONY : FixedXor.obj
@@ -149,33 +176,6 @@ FixedXor.cpp.s:
 	$(MAKE) -f CMakeFiles\FixedXor.dir\build.make CMakeFiles/FixedXor.dir/FixedXor.cpp.s
 .PHONY : FixedXor.cpp.s
 
-main.obj: main.cpp.obj
-
-.PHONY : main.obj
-
-# target to build an object file
-main.cpp.obj:
-	$(MAKE) -f CMakeFiles\FixedXor.dir\build.make CMakeFiles/FixedXor.dir/main.cpp.obj
-.PHONY : main.cpp.obj
-
-main.i: main.cpp.i
-
-.PHONY : main.i
-
-# target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles\FixedXor.dir\build.make CMakeFiles/FixedXor.dir/main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
-
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles\FixedXor.dir\build.make CMakeFiles/FixedXor.dir/main.cpp.s
-.PHONY : main.cpp.s
-
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -185,12 +185,12 @@ help:
 	@echo ... FixedXor
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... C_/Users/D064693/CLionProjects/CryptoPals/ConvertHexToBase64/Encodings.obj
+	@echo ... C_/Users/D064693/CLionProjects/CryptoPals/ConvertHexToBase64/Encodings.i
+	@echo ... C_/Users/D064693/CLionProjects/CryptoPals/ConvertHexToBase64/Encodings.s
 	@echo ... FixedXor.obj
 	@echo ... FixedXor.i
 	@echo ... FixedXor.s
-	@echo ... main.obj
-	@echo ... main.i
-	@echo ... main.s
 .PHONY : help
 
 

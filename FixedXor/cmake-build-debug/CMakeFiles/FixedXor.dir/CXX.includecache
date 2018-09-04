@@ -6,7 +6,23 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/D064693/CLionProjects/CryptoPals/ConvertHexToBase64/Encodings.h
+vector
+-
+iostream
+-
+
+C:/Users/D064693/CLionProjects/CryptoPals/FixedXor/FixedXor.h
+string
+-
+vector
+-
+
 C:/Users/D064693/CLionProjects/CryptoPals/FixedXor/main.cpp
 iostream
 -
+../ConvertHexToBase64/Encodings.h
+C:/Users/D064693/CLionProjects/CryptoPals/ConvertHexToBase64/Encodings.h
+FixedXor.h
+C:/Users/D064693/CLionProjects/CryptoPals/FixedXor/FixedXor.h
 

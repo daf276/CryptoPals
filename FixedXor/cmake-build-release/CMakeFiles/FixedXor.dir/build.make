@@ -56,22 +56,9 @@ include CMakeFiles/FixedXor.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/FixedXor.dir/flags.make
 
-CMakeFiles/FixedXor.dir/main.cpp.obj: CMakeFiles/FixedXor.dir/flags.make
-CMakeFiles/FixedXor.dir/main.cpp.obj: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\D064693\CLionProjects\CryptoPals\FixedXor\cmake-build-release\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/FixedXor.dir/main.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\FixedXor.dir\main.cpp.obj -c C:\Users\D064693\CLionProjects\CryptoPals\FixedXor\main.cpp
-
-CMakeFiles/FixedXor.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/FixedXor.dir/main.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\D064693\CLionProjects\CryptoPals\FixedXor\main.cpp > CMakeFiles\FixedXor.dir\main.cpp.i
-
-CMakeFiles/FixedXor.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/FixedXor.dir/main.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\D064693\CLionProjects\CryptoPals\FixedXor\main.cpp -o CMakeFiles\FixedXor.dir\main.cpp.s
-
 CMakeFiles/FixedXor.dir/FixedXor.cpp.obj: CMakeFiles/FixedXor.dir/flags.make
 CMakeFiles/FixedXor.dir/FixedXor.cpp.obj: ../FixedXor.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\D064693\CLionProjects\CryptoPals\FixedXor\cmake-build-release\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/FixedXor.dir/FixedXor.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\D064693\CLionProjects\CryptoPals\FixedXor\cmake-build-release\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/FixedXor.dir/FixedXor.cpp.obj"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\FixedXor.dir\FixedXor.cpp.obj -c C:\Users\D064693\CLionProjects\CryptoPals\FixedXor\FixedXor.cpp
 
 CMakeFiles/FixedXor.dir/FixedXor.cpp.i: cmake_force
@@ -82,16 +69,29 @@ CMakeFiles/FixedXor.dir/FixedXor.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/FixedXor.dir/FixedXor.cpp.s"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\D064693\CLionProjects\CryptoPals\FixedXor\FixedXor.cpp -o CMakeFiles\FixedXor.dir\FixedXor.cpp.s
 
+CMakeFiles/FixedXor.dir/C_/Users/D064693/CLionProjects/CryptoPals/ConvertHexToBase64/Encodings.cpp.obj: CMakeFiles/FixedXor.dir/flags.make
+CMakeFiles/FixedXor.dir/C_/Users/D064693/CLionProjects/CryptoPals/ConvertHexToBase64/Encodings.cpp.obj: C:/Users/D064693/CLionProjects/CryptoPals/ConvertHexToBase64/Encodings.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\D064693\CLionProjects\CryptoPals\FixedXor\cmake-build-release\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/FixedXor.dir/C_/Users/D064693/CLionProjects/CryptoPals/ConvertHexToBase64/Encodings.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\FixedXor.dir\C_\Users\D064693\CLionProjects\CryptoPals\ConvertHexToBase64\Encodings.cpp.obj -c C:\Users\D064693\CLionProjects\CryptoPals\ConvertHexToBase64\Encodings.cpp
+
+CMakeFiles/FixedXor.dir/C_/Users/D064693/CLionProjects/CryptoPals/ConvertHexToBase64/Encodings.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/FixedXor.dir/C_/Users/D064693/CLionProjects/CryptoPals/ConvertHexToBase64/Encodings.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\D064693\CLionProjects\CryptoPals\ConvertHexToBase64\Encodings.cpp > CMakeFiles\FixedXor.dir\C_\Users\D064693\CLionProjects\CryptoPals\ConvertHexToBase64\Encodings.cpp.i
+
+CMakeFiles/FixedXor.dir/C_/Users/D064693/CLionProjects/CryptoPals/ConvertHexToBase64/Encodings.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/FixedXor.dir/C_/Users/D064693/CLionProjects/CryptoPals/ConvertHexToBase64/Encodings.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\D064693\CLionProjects\CryptoPals\ConvertHexToBase64\Encodings.cpp -o CMakeFiles\FixedXor.dir\C_\Users\D064693\CLionProjects\CryptoPals\ConvertHexToBase64\Encodings.cpp.s
+
 # Object files for target FixedXor
 FixedXor_OBJECTS = \
-"CMakeFiles/FixedXor.dir/main.cpp.obj" \
-"CMakeFiles/FixedXor.dir/FixedXor.cpp.obj"
+"CMakeFiles/FixedXor.dir/FixedXor.cpp.obj" \
+"CMakeFiles/FixedXor.dir/C_/Users/D064693/CLionProjects/CryptoPals/ConvertHexToBase64/Encodings.cpp.obj"
 
 # External object files for target FixedXor
 FixedXor_EXTERNAL_OBJECTS =
 
-FixedXor.exe: CMakeFiles/FixedXor.dir/main.cpp.obj
 FixedXor.exe: CMakeFiles/FixedXor.dir/FixedXor.cpp.obj
+FixedXor.exe: CMakeFiles/FixedXor.dir/C_/Users/D064693/CLionProjects/CryptoPals/ConvertHexToBase64/Encodings.cpp.obj
 FixedXor.exe: CMakeFiles/FixedXor.dir/build.make
 FixedXor.exe: CMakeFiles/FixedXor.dir/linklibs.rsp
 FixedXor.exe: CMakeFiles/FixedXor.dir/objects1.rsp

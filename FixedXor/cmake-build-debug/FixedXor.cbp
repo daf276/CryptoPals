@@ -80,13 +80,16 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/D064693/CLionProjects/CryptoPals/ConvertHexToBase64/Encodings.cpp">
+			<Option target="FixedXor"/>
+		</Unit>
+		<Unit filename="C:/Users/D064693/CLionProjects/CryptoPals/ConvertHexToBase64/Encodings.h">
+			<Option target="FixedXor"/>
+		</Unit>
 		<Unit filename="C:/Users/D064693/CLionProjects/CryptoPals/FixedXor/FixedXor.cpp">
 			<Option target="FixedXor"/>
 		</Unit>
 		<Unit filename="C:/Users/D064693/CLionProjects/CryptoPals/FixedXor/FixedXor.h">
-			<Option target="FixedXor"/>
-		</Unit>
-		<Unit filename="C:/Users/D064693/CLionProjects/CryptoPals/FixedXor/main.cpp">
 			<Option target="FixedXor"/>
 		</Unit>
 		<Unit filename="C:/Users/D064693/CLionProjects/CryptoPals/FixedXor/CMakeLists.txt">

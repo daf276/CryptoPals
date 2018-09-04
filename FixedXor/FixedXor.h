@@ -2,6 +2,7 @@
 #define FIXEDXOR_FIXEDXOR_H
 
 #include <string>
+#include <vector>
 
 namespace Crypto {
     class FixedXor {
@@ -12,7 +13,7 @@ namespace Crypto {
             }
         };
     public:
-        static std::string Xor2Buffers(std::string xor_string_1, std::string xor_string_2);
+        static std::vector<char> Xor2Buffers(std::vector<char> bytearray1, std::vector<char> bytearray2);
     };
 }
 

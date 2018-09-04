@@ -18,7 +18,8 @@ namespace Crypto {
 
     public:
         static std::string hexToBase64(std::string input);
-        static void hexStringToByteArray(std::string *hexString, std::vector<char> *byteArray);
+        static std::vector<char> HexStringToByteArray(std::string hexString);
+        static std::string ByteArrayToHexString( std::vector<char> byteArray);
     };
 }
 
