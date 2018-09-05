@@ -3,7 +3,8 @@
 #include <sstream>
 #include <cfloat>
 #include <vector>
-#include
+#include "../HelperFunctions/Encodings.h"
+#include "../HelperFunctions/Algorithms.h"
 
 int main() {
     std::ifstream infile("../test.txt");

@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/D064693/CLionProjects/CryptoPals/HelperFunctions/Algorithms.h
+string
+-
+vector
+-
+
+C:/Users/D064693/CLionProjects/CryptoPals/RepeatingKeyXor/main.cpp
+iostream
+-
+../HelperFunctions/Algorithms.h
+C:/Users/D064693/CLionProjects/CryptoPals/HelperFunctions/Algorithms.h
+

@@ -109,14 +109,88 @@ depend:
 	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
+#=============================================================================
+# Target rules for targets named HelperFunctions
+
+# Build rule for target.
+HelperFunctions: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 HelperFunctions
+.PHONY : HelperFunctions
+
+# fast build rule for target.
+HelperFunctions/fast:
+	$(MAKE) -f CMakeFiles\HelperFunctions.dir\build.make CMakeFiles/HelperFunctions.dir/build
+.PHONY : HelperFunctions/fast
+
+Algorithms.obj: Algorithms.cpp.obj
+
+.PHONY : Algorithms.obj
+
+# target to build an object file
+Algorithms.cpp.obj:
+	$(MAKE) -f CMakeFiles\HelperFunctions.dir\build.make CMakeFiles/HelperFunctions.dir/Algorithms.cpp.obj
+.PHONY : Algorithms.cpp.obj
+
+Algorithms.i: Algorithms.cpp.i
+
+.PHONY : Algorithms.i
+
+# target to preprocess a source file
+Algorithms.cpp.i:
+	$(MAKE) -f CMakeFiles\HelperFunctions.dir\build.make CMakeFiles/HelperFunctions.dir/Algorithms.cpp.i
+.PHONY : Algorithms.cpp.i
+
+Algorithms.s: Algorithms.cpp.s
+
+.PHONY : Algorithms.s
+
+# target to generate assembly for a file
+Algorithms.cpp.s:
+	$(MAKE) -f CMakeFiles\HelperFunctions.dir\build.make CMakeFiles/HelperFunctions.dir/Algorithms.cpp.s
+.PHONY : Algorithms.cpp.s
+
+Encodings.obj: Encodings.cpp.obj
+
+.PHONY : Encodings.obj
+
+# target to build an object file
+Encodings.cpp.obj:
+	$(MAKE) -f CMakeFiles\HelperFunctions.dir\build.make CMakeFiles/HelperFunctions.dir/Encodings.cpp.obj
+.PHONY : Encodings.cpp.obj
+
+Encodings.i: Encodings.cpp.i
+
+.PHONY : Encodings.i
+
+# target to preprocess a source file
+Encodings.cpp.i:
+	$(MAKE) -f CMakeFiles\HelperFunctions.dir\build.make CMakeFiles/HelperFunctions.dir/Encodings.cpp.i
+.PHONY : Encodings.cpp.i
+
+Encodings.s: Encodings.cpp.s
+
+.PHONY : Encodings.s
+
+# target to generate assembly for a file
+Encodings.cpp.s:
+	$(MAKE) -f CMakeFiles\HelperFunctions.dir\build.make CMakeFiles/HelperFunctions.dir/Encodings.cpp.s
+.PHONY : Encodings.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
 	@echo ... all (the default if no target is provided)
 	@echo ... clean
 	@echo ... depend
+	@echo ... HelperFunctions
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... Algorithms.obj
+	@echo ... Algorithms.i
+	@echo ... Algorithms.s
+	@echo ... Encodings.obj
+	@echo ... Encodings.i
+	@echo ... Encodings.s
 .PHONY : help
 
 

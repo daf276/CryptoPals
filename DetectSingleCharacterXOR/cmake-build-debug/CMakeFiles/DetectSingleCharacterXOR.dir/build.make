@@ -78,6 +78,7 @@ DetectSingleCharacterXOR_EXTERNAL_OBJECTS =
 
 DetectSingleCharacterXOR.exe: CMakeFiles/DetectSingleCharacterXOR.dir/main.cpp.obj
 DetectSingleCharacterXOR.exe: CMakeFiles/DetectSingleCharacterXOR.dir/build.make
+DetectSingleCharacterXOR.exe: ../lib/libHelperFunctions.dll.a
 DetectSingleCharacterXOR.exe: CMakeFiles/DetectSingleCharacterXOR.dir/linklibs.rsp
 DetectSingleCharacterXOR.exe: CMakeFiles/DetectSingleCharacterXOR.dir/objects1.rsp
 DetectSingleCharacterXOR.exe: CMakeFiles/DetectSingleCharacterXOR.dir/link.txt

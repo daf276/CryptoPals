@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/HelperFunctions.dir/Encodings.cpp.obj"
   "CMakeFiles/HelperFunctions.dir/Algorithms.cpp.obj"
+  "CMakeFiles/HelperFunctions.dir/Encodings.cpp.obj"
   "libHelperFunctions.pdb"
   "libHelperFunctions.dll"
   "libHelperFunctions.dll.a"

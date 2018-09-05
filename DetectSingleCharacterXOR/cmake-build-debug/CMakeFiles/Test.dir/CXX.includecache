@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/D064693/CLionProjects/CryptoPals/HelperFunctions/Algorithms.cpp
+map
+-
+Algorithms.h
+C:/Users/D064693/CLionProjects/CryptoPals/HelperFunctions/Algorithms.h
+cmath
+-
+iostream
+-
+
+C:/Users/D064693/CLionProjects/CryptoPals/HelperFunctions/Algorithms.h
+string
+-
+vector
+-
+
+C:/Users/D064693/CLionProjects/CryptoPals/HelperFunctions/Encodings.cpp
+iostream
+-
+vector
+-
+Encodings.h
+C:/Users/D064693/CLionProjects/CryptoPals/HelperFunctions/Encodings.h
+
+C:/Users/D064693/CLionProjects/CryptoPals/HelperFunctions/Encodings.h
+vector
+-
+iostream
+-
+

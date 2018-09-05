@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/D064693/CLionProjects/CryptoPals/DetectSingleCharacterXOR/main.cpp
+iostream
+-
+fstream
+-
+sstream
+-
+cfloat
+-
+vector
+-
+../HelperFunctions/Encodings.h
+C:/Users/D064693/CLionProjects/CryptoPals/HelperFunctions/Encodings.h
+../HelperFunctions/Algorithms.h
+C:/Users/D064693/CLionProjects/CryptoPals/HelperFunctions/Algorithms.h
+
+C:/Users/D064693/CLionProjects/CryptoPals/HelperFunctions/Algorithms.h
+string
+-
+vector
+-
+
+C:/Users/D064693/CLionProjects/CryptoPals/HelperFunctions/Encodings.h
+vector
+-
+iostream
+-
+

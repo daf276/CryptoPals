@@ -247,6 +247,12 @@ HelperFunctions_DIR:PATH=HelperFunctions_DIR-NOTFOUND
 //The directory containing a CMake configuration file for HelperFunctons.
 HelperFunctons_DIR:PATH=HelperFunctons_DIR-NOTFOUND
 
+//Path to a file.
+Test:PATH=C:/Program Files/mingw-w64/x86_64-8.1.0-win32-seh-rt_v6-rev0/mingw64
+
+//Path to a library.
+Test2:FILEPATH=Test2-NOTFOUND
+
 
 ########################
 # INTERNAL cache entries

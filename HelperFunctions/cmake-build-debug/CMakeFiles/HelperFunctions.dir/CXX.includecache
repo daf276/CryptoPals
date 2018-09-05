@@ -6,29 +6,19 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/D064693/CLionProjects/CryptoPals/HelperFunctions/Algorithms.cpp
+map
+-
+Algorithms.h
+C:/Users/D064693/CLionProjects/CryptoPals/HelperFunctions/Algorithms.h
+cmath
+-
+iostream
+-
+
 C:/Users/D064693/CLionProjects/CryptoPals/HelperFunctions/Algorithms.h
 string
 -
 vector
--
-
-C:/Users/D064693/CLionProjects/CryptoPals/HelperFunctions/Encodings.h
-vector
--
-iostream
--
-
-C:/Users/D064693/CLionProjects/CryptoPals/HelperFunctions/main.cpp
-iostream
--
-Algorithms.h
-C:/Users/D064693/CLionProjects/CryptoPals/HelperFunctions/Algorithms.h
-Encodings.h
-C:/Users/D064693/CLionProjects/CryptoPals/HelperFunctions/Encodings.h
-fstream
--
-sstream
--
-cfloat
 -
 

@@ -7,7 +7,3 @@ CMakeFiles/HelperFunctions.dir/Algorithms.cpp.obj: ../Algorithms.h
 CMakeFiles/HelperFunctions.dir/Encodings.cpp.obj: ../Encodings.cpp
 CMakeFiles/HelperFunctions.dir/Encodings.cpp.obj: ../Encodings.h
 
-CMakeFiles/HelperFunctions.dir/main.cpp.obj: ../Algorithms.h
-CMakeFiles/HelperFunctions.dir/main.cpp.obj: ../Encodings.h
-CMakeFiles/HelperFunctions.dir/main.cpp.obj: ../main.cpp
-
