@@ -13,7 +13,11 @@ namespace Encodings {
 
     std::string NumberToBase64(char number);
 
-    std::string HexToBase64(std::string input);
+    char Base64ToNumber(char input);
+
+    std::string EncodeBase64(std::vector<char> input);
+
+    std::vector<char> DecodeBase64(std::string input);
 
     std::vector<char> HexStringToByteArray(std::string hexString);
 }

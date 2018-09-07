@@ -78,4 +78,17 @@ namespace Algorithms {
 
         return error;
     }
+
+    int GetHammingDistance(std::string input, std::string input2){
+        std::vector<unsigned long long> bytes1(input.begin(), input.end());
+        std::vector<unsigned long long> bytes2(input2.begin(), input2.end());
+
+        int result = 0;
+
+        for (int i = 0; i < bytes1.size(); ++i) {
+            result += __builtin_popcountll(bytes1[i] ^ bytes2[i]);
+        }
+
+        return result;
+    }
 }
