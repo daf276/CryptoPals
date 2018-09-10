@@ -61,6 +61,26 @@ namespace Algorithms {
         return std::string(result.begin(), result.end());
     }
 
+    char GetEncryptionKeyOfRepeatingSingleByteXorDecryption(std::vector<char> input) {
+        double result_error = input.size();
+        std::vector<char> result;
+        char key;
+        for (char i = 32; i < 127; ++i) {
+            std::vector<char> encryption_key = {i};
+            std::vector<char> current_decrypted_text = Algorithms::RepeatingKeyXor(input, encryption_key);
+
+            double current_error = EvaluateLetterFrequencyError(current_decrypted_text);
+
+            if (current_error < result_error) {
+                result_error = current_error;
+                result = current_decrypted_text;
+                key = i;
+            }
+        }
+
+        return key;
+    }
+
     double EvaluateLetterFrequencyError(std::vector<char> input) {
         std::map<char, int> letter_count = {};
         for (char &j : input) {

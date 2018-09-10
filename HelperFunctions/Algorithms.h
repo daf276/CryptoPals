@@ -7,6 +7,7 @@
 namespace Algorithms {
         std::vector<char> RepeatingKeyXor(std::vector<char> bytearray1, std::vector<char> bytearray2);
         std::string RepeatingSingleByteXorDecryption(std::vector<char> input);
+        char GetEncryptionKeyOfRepeatingSingleByteXorDecryption(std::vector<char> input);
         double EvaluateLetterFrequencyError(std::vector<char> input);
         int GetHammingDistance(std::string input, std::string input2);
 }

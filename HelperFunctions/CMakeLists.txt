@@ -4,3 +4,4 @@ project(HelperFunctions)
 set(CMAKE_CXX_STANDARD 17)
 
 add_library(HelperFunctions SHARED Algorithms.h Algorithms.cpp Encodings.h Encodings.cpp)
+add_executable(HelperFunctions2 main.cpp Algorithms.h Algorithms.cpp Encodings.h Encodings.cpp)

@@ -122,6 +122,19 @@ HelperFunctions/fast:
 	$(MAKE) -f CMakeFiles\HelperFunctions.dir\build.make CMakeFiles/HelperFunctions.dir/build
 .PHONY : HelperFunctions/fast
 
+#=============================================================================
+# Target rules for targets named HelperFunctions2
+
+# Build rule for target.
+HelperFunctions2: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 HelperFunctions2
+.PHONY : HelperFunctions2
+
+# fast build rule for target.
+HelperFunctions2/fast:
+	$(MAKE) -f CMakeFiles\HelperFunctions2.dir\build.make CMakeFiles/HelperFunctions2.dir/build
+.PHONY : HelperFunctions2/fast
+
 Algorithms.obj: Algorithms.cpp.obj
 
 .PHONY : Algorithms.obj
@@ -129,6 +142,7 @@ Algorithms.obj: Algorithms.cpp.obj
 # target to build an object file
 Algorithms.cpp.obj:
 	$(MAKE) -f CMakeFiles\HelperFunctions.dir\build.make CMakeFiles/HelperFunctions.dir/Algorithms.cpp.obj
+	$(MAKE) -f CMakeFiles\HelperFunctions2.dir\build.make CMakeFiles/HelperFunctions2.dir/Algorithms.cpp.obj
 .PHONY : Algorithms.cpp.obj
 
 Algorithms.i: Algorithms.cpp.i
@@ -138,6 +152,7 @@ Algorithms.i: Algorithms.cpp.i
 # target to preprocess a source file
 Algorithms.cpp.i:
 	$(MAKE) -f CMakeFiles\HelperFunctions.dir\build.make CMakeFiles/HelperFunctions.dir/Algorithms.cpp.i
+	$(MAKE) -f CMakeFiles\HelperFunctions2.dir\build.make CMakeFiles/HelperFunctions2.dir/Algorithms.cpp.i
 .PHONY : Algorithms.cpp.i
 
 Algorithms.s: Algorithms.cpp.s
@@ -147,6 +162,7 @@ Algorithms.s: Algorithms.cpp.s
 # target to generate assembly for a file
 Algorithms.cpp.s:
 	$(MAKE) -f CMakeFiles\HelperFunctions.dir\build.make CMakeFiles/HelperFunctions.dir/Algorithms.cpp.s
+	$(MAKE) -f CMakeFiles\HelperFunctions2.dir\build.make CMakeFiles/HelperFunctions2.dir/Algorithms.cpp.s
 .PHONY : Algorithms.cpp.s
 
 Encodings.obj: Encodings.cpp.obj
@@ -156,6 +172,7 @@ Encodings.obj: Encodings.cpp.obj
 # target to build an object file
 Encodings.cpp.obj:
 	$(MAKE) -f CMakeFiles\HelperFunctions.dir\build.make CMakeFiles/HelperFunctions.dir/Encodings.cpp.obj
+	$(MAKE) -f CMakeFiles\HelperFunctions2.dir\build.make CMakeFiles/HelperFunctions2.dir/Encodings.cpp.obj
 .PHONY : Encodings.cpp.obj
 
 Encodings.i: Encodings.cpp.i
@@ -165,6 +182,7 @@ Encodings.i: Encodings.cpp.i
 # target to preprocess a source file
 Encodings.cpp.i:
 	$(MAKE) -f CMakeFiles\HelperFunctions.dir\build.make CMakeFiles/HelperFunctions.dir/Encodings.cpp.i
+	$(MAKE) -f CMakeFiles\HelperFunctions2.dir\build.make CMakeFiles/HelperFunctions2.dir/Encodings.cpp.i
 .PHONY : Encodings.cpp.i
 
 Encodings.s: Encodings.cpp.s
@@ -174,7 +192,35 @@ Encodings.s: Encodings.cpp.s
 # target to generate assembly for a file
 Encodings.cpp.s:
 	$(MAKE) -f CMakeFiles\HelperFunctions.dir\build.make CMakeFiles/HelperFunctions.dir/Encodings.cpp.s
+	$(MAKE) -f CMakeFiles\HelperFunctions2.dir\build.make CMakeFiles/HelperFunctions2.dir/Encodings.cpp.s
 .PHONY : Encodings.cpp.s
+
+main.obj: main.cpp.obj
+
+.PHONY : main.obj
+
+# target to build an object file
+main.cpp.obj:
+	$(MAKE) -f CMakeFiles\HelperFunctions2.dir\build.make CMakeFiles/HelperFunctions2.dir/main.cpp.obj
+.PHONY : main.cpp.obj
+
+main.i: main.cpp.i
+
+.PHONY : main.i
+
+# target to preprocess a source file
+main.cpp.i:
+	$(MAKE) -f CMakeFiles\HelperFunctions2.dir\build.make CMakeFiles/HelperFunctions2.dir/main.cpp.i
+.PHONY : main.cpp.i
+
+main.s: main.cpp.s
+
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.cpp.s:
+	$(MAKE) -f CMakeFiles\HelperFunctions2.dir\build.make CMakeFiles/HelperFunctions2.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -183,6 +229,7 @@ help:
 	@echo ... clean
 	@echo ... depend
 	@echo ... HelperFunctions
+	@echo ... HelperFunctions2
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Algorithms.obj
@@ -191,6 +238,9 @@ help:
 	@echo ... Encodings.obj
 	@echo ... Encodings.i
 	@echo ... Encodings.s
+	@echo ... main.obj
+	@echo ... main.i
+	@echo ... main.s
 .PHONY : help
 
 
