@@ -1,0 +1,14 @@
+[package]
+name = "CryptoPals"
+version = "0.1.0"
+authors = ["Attila <daf276@gmx.de>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+hex = "0.4.1"
+base64 = "0.11.0"
+lazy_static = "1.4.0"
+hashbrown = "0.7.0"
+rayon = "1.3.0"
