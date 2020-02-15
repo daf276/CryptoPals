@@ -49,8 +49,8 @@ lazy_static! {
 
 fn main() {
     let before_cycle = Instant::now();
-    for _ in 0..1 {
-        challenge4_set1();
+    for _ in 0..1000 {
+        challenge5_set1();
     }
     let time = before_cycle.elapsed().as_micros();
     println!("{}", time);
@@ -102,6 +102,14 @@ fn challenge4_set1() {
     );
 }
 
+fn challenge5_set1() {
+    let string = b"Burning 'em, if you ain't quick and nimble
+I go crazy when I hear a cymbal"
+        .to_vec();
+    let key = b"ICE".to_vec();
+    let result = println!("{}", hex::encode(repeating_key_xor(&string, &key)));
+}
+
 fn lines_from_file(filename: impl AsRef<Path>) -> Vec<String> {
     let file = File::open(filename).expect("No such file");
     let buf = BufReader::new(file);
@@ -110,6 +118,15 @@ fn lines_from_file(filename: impl AsRef<Path>) -> Vec<String> {
 
 fn hex_to_ascii(hex: Vec<u8>) -> String {
     hex.iter().map(|&x| x as char).collect()
+}
+
+fn repeating_key_xor(text: &Vec<u8>, key: &Vec<u8>) -> Vec<u8> {
+    let repeated_key = (0..text.len())
+        .into_iter()
+        .map(|x| key[x % key.len()])
+        .collect();
+
+    xor(&text, &repeated_key)
 }
 
 fn single_char_xor(text: &Vec<u8>, key: u8) -> Vec<u8> {
