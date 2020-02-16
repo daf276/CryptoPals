@@ -1,10 +1,11 @@
 #[macro_use]
 extern crate lazy_static;
 
-use base64::encode_config;
+use base64::{decode_config, encode_config};
 use hashbrown::HashMap;
 use hex;
 use rayon::prelude::*;
+use std::fs;
 use std::time::Instant;
 use std::{
     fs::File,
@@ -49,8 +50,8 @@ lazy_static! {
 
 fn main() {
     let before_cycle = Instant::now();
-    for _ in 0..1000 {
-        challenge5_set1();
+    for _ in 0..1 {
+        challenge6_set1();
     }
     let time = before_cycle.elapsed().as_micros();
     println!("{}", time);
@@ -72,34 +73,27 @@ fn challenge2_set1() {
 fn challenge3_set1() {
     let string = "1b37373331363f78151b7f2b783431333d78397828372d363c78373e783a393b3736";
     let text = hex::decode(string).unwrap();
-    let result = (0..=255)
-        .into_par_iter()
-        .map(|key| hex_to_ascii(single_char_xor(&text, key as u8)))
-        .min_by_key(|x| (eval_letter_frequency(x) * 1000000.0) as u32)
-        .unwrap();
+    let key = find_single_char_xor_key(&text);
+    let result = hex_to_ascii(single_char_xor(&text, key));
     println!("{}", result);
+    println!("Key: {}", key as char);
 }
 
 fn challenge4_set1() {
     let lines = lines_from_file("4.txt");
-    let mut results = Vec::new();
-    for line in lines {
-        let text = hex::decode(line).unwrap();
-        let result = (0..=255)
-            .into_par_iter()
-            .map(|key| hex_to_ascii(single_char_xor(&text, key as u8)))
-            .min_by_key(|x| (eval_letter_frequency(x) * 1000000.0) as u32)
-            .unwrap();
-        results.push(result);
-    }
 
-    println!(
-        "{}",
-        results
-            .iter()
-            .min_by_key(|x| (eval_letter_frequency(x) * 1000000.0) as u32)
-            .unwrap()
-    );
+    let decrypted: Vec<String> = lines
+        .into_par_iter()
+        .map(|line| hex::decode(line).unwrap())
+        .map(|text| hex_to_ascii(single_char_xor(&text, find_single_char_xor_key(&text))))
+        .collect();
+
+    let english_text = decrypted
+        .into_iter()
+        .min_by_key(|x| eval_letter_frequency(x))
+        .unwrap();
+
+    println!("{}", english_text);
 }
 
 fn challenge5_set1() {
@@ -107,7 +101,20 @@ fn challenge5_set1() {
 I go crazy when I hear a cymbal"
         .to_vec();
     let key = b"ICE".to_vec();
-    let result = println!("{}", hex::encode(repeating_key_xor(&string, &key)));
+    println!("{}", hex::encode(repeating_key_xor(&string, &key)));
+}
+
+fn challenge6_set1() {
+    let input = fs::read_to_string("6.txt").unwrap().replace('\n', "");
+    let text = decode_config(&input, base64::STANDARD).unwrap();
+    let key_size = estimate_key_size(29, 29, &text);
+    let key = (0..key_size)
+        .map(|position| find_single_char_xor_key(&chunks(position, key_size, &text)))
+        .collect();
+    let decrypted = repeating_key_xor(&text, &key);
+
+    println!("{}", hex_to_ascii(decrypted));
+    println!("Key: {}", hex_to_ascii(key));
 }
 
 fn lines_from_file(filename: impl AsRef<Path>) -> Vec<String> {
@@ -116,8 +123,15 @@ fn lines_from_file(filename: impl AsRef<Path>) -> Vec<String> {
     buf.lines().map(|l| l.unwrap()).collect()
 }
 
-fn hex_to_ascii(hex: Vec<u8>) -> String {
-    hex.iter().map(|&x| x as char).collect()
+fn find_single_char_xor_key(text: &Vec<u8>) -> u8 {
+    (0..=255)
+        .into_iter()
+        .min_by_key(|key| eval_letter_frequency(&hex_to_ascii(single_char_xor(&text, *key as u8))))
+        .unwrap()
+}
+
+fn single_char_xor(text: &Vec<u8>, key: u8) -> Vec<u8> {
+    xor(&text, &vec![key; text.len()])
 }
 
 fn repeating_key_xor(text: &Vec<u8>, key: &Vec<u8>) -> Vec<u8> {
@@ -129,26 +143,54 @@ fn repeating_key_xor(text: &Vec<u8>, key: &Vec<u8>) -> Vec<u8> {
     xor(&text, &repeated_key)
 }
 
-fn single_char_xor(text: &Vec<u8>, key: u8) -> Vec<u8> {
-    xor(&text, &vec![key; text.len()])
-}
-
 fn xor(hex1: &Vec<u8>, hex2: &Vec<u8>) -> Vec<u8> {
     hex1.iter().zip(hex2.iter()).map(|(x, y)| x ^ y).collect()
 }
 
-fn eval_letter_frequency(text: &String) -> f64 {
+fn chunks(position: usize, key_size: usize, text: &Vec<u8>) -> Vec<u8> {
+    text.clone()
+        .into_iter()
+        .skip(position)
+        .step_by(key_size)
+        .collect()
+}
+
+//TODO make this better
+fn estimate_key_size(lower_bound: usize, upper_bound: usize, text: &Vec<u8>) -> usize {
+    (lower_bound..=upper_bound)
+        .into_iter()
+        .min_by_key(|&x| {
+            (hamming_distance(text[0..x].to_vec(), text[x..x * 2].to_vec()) as f64 / x as f64
+                * 1000000.0) as u32
+        })
+        .unwrap()
+}
+
+fn hex_to_ascii(hex: Vec<u8>) -> String {
+    hex.iter().map(|&x| x as char).collect()
+}
+
+fn eval_letter_frequency(text: &String) -> u32 {
     let mut letter_count = HashMap::with_capacity(LETTER_FREQUENCY.len());
 
     text.to_lowercase()
         .chars()
         .for_each(|c| *letter_count.entry(c).or_insert(0.0) += 1.0);
 
-    LETTER_FREQUENCY
+    (LETTER_FREQUENCY
         .keys()
         .map(|key| {
             *letter_count.entry(*key).or_default() / text.len() as f64 - LETTER_FREQUENCY[&key]
         })
         .sum::<f64>()
         .abs()
+        * 1000000.0) as u32 //Convert to u32 for sorting purposes
+}
+
+fn hamming_distance(bytes1: Vec<u8>, bytes2: Vec<u8>) -> u32 {
+    bytes1
+        .iter()
+        .zip(bytes2.iter())
+        .map(|(x, y)| (x ^ y).count_ones())
+        .sum()
 }
