@@ -107,8 +107,9 @@ I go crazy when I hear a cymbal"
 fn challenge6_set1() {
     let input = fs::read_to_string("6.txt").unwrap().replace('\n', "");
     let text = decode_config(&input, base64::STANDARD).unwrap();
-    let key_size = estimate_key_size(29, 29, &text);
+    let key_size = estimate_key_size(2, 40, &text);
     let key = (0..key_size)
+        .into_par_iter()
         .map(|position| find_single_char_xor_key(&chunks(position, key_size, &text)))
         .collect();
     let decrypted = repeating_key_xor(&text, &key);
@@ -125,7 +126,6 @@ fn lines_from_file(filename: impl AsRef<Path>) -> Vec<String> {
 
 fn find_single_char_xor_key(text: &Vec<u8>) -> u8 {
     (0..=255)
-        .into_iter()
         .min_by_key(|key| eval_letter_frequency(&hex_to_ascii(single_char_xor(&text, *key as u8))))
         .unwrap()
 }
@@ -135,10 +135,7 @@ fn single_char_xor(text: &Vec<u8>, key: u8) -> Vec<u8> {
 }
 
 fn repeating_key_xor(text: &Vec<u8>, key: &Vec<u8>) -> Vec<u8> {
-    let repeated_key = (0..text.len())
-        .into_iter()
-        .map(|x| key[x % key.len()])
-        .collect();
+    let repeated_key = (0..text.len()).map(|x| key[x % key.len()]).collect();
 
     xor(&text, &repeated_key)
 }
@@ -155,15 +152,24 @@ fn chunks(position: usize, key_size: usize, text: &Vec<u8>) -> Vec<u8> {
         .collect()
 }
 
-//TODO make this better
 fn estimate_key_size(lower_bound: usize, upper_bound: usize, text: &Vec<u8>) -> usize {
     (lower_bound..=upper_bound)
-        .into_iter()
-        .min_by_key(|&x| {
-            (hamming_distance(text[0..x].to_vec(), text[x..x * 2].to_vec()) as f64 / x as f64
-                * 1000000.0) as u32
-        })
+        .min_by_key(|&key_size| normalized_hamming(&text, key_size))
         .unwrap()
+}
+
+fn normalized_hamming(text: &Vec<u8>, key_size: usize) -> u32 {
+    let chunks: Vec<Vec<u8>> = (0..text.len() / key_size)
+        .map(|x| text[x * key_size..(x + 1) * key_size].to_vec())
+        .collect();
+
+    let hamming = (0..chunks.len() - chunks.len() % 2)
+        .step_by(2)
+        .map(|x| hamming_distance(&chunks[x], &chunks[x + 1]));
+
+    let len = hamming.len() as f64;
+    let sum = hamming.sum::<u32>() as f64;
+    (sum / len * 1000000.0 / key_size as f64) as u32
 }
 
 fn hex_to_ascii(hex: Vec<u8>) -> String {
@@ -187,7 +193,7 @@ fn eval_letter_frequency(text: &String) -> u32 {
         * 1000000.0) as u32 //Convert to u32 for sorting purposes
 }
 
-fn hamming_distance(bytes1: Vec<u8>, bytes2: Vec<u8>) -> u32 {
+fn hamming_distance(bytes1: &Vec<u8>, bytes2: &Vec<u8>) -> u32 {
     bytes1
         .iter()
         .zip(bytes2.iter())
